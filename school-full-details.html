@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full School Detail</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Online Schools</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-between"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="school-detail.html"
+                >Back to School List</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="school-detail.html">School Detail</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Branches</a></li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Register</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+      <div class="container">
+        <h1 id="heroSchoolName">Full School Details</h1>
+        <p>Search any school of your desire and enroll your child</p>
+      </div>
+
+      <div class="wave"></div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <!-- Main Content Area - 70% -->
+        <div class="col-lg-8 col-md-12 mb-4">
+          <div class="content-area">
+            <img
+              id="schoolImage"
+              class="school-img"
+              src=""
+              alt="School Image"
+            />
+
+            <!-- Details -->
+            <div>
+              <div class="section-title">Details</div>
+              <div class="details-grid">
+                <div class="detail-item">
+                  <strong>Website:</strong> <span id="website"></span>
+                </div>
+                <div class="detail-item">
+                  <strong>Country:</strong> <span id="country"></span>
+                </div>
+
+                <div class="detail-item">
+                  <strong>City:</strong> <span id="city"></span>
+                </div>
+                <div class="detail-item">
+                  <strong>Area:</strong> <span id="area"></span>
+                </div>
+                <div class="detail-item">
+                  <strong>Location:</strong> <span id="location"></span>
+                </div>
+
+                <div class="detail-item">
+                  <strong>Gender:</strong> <span id="gender"></span>
+                </div>
+                <div class="detail-item">
+                  <strong>Status:</strong> <span id="status"></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div>
+              <div class="section-title">Description</div>
+              <div class="description" id="descriptionText"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ad Area - 30% -->
+        <div class="col-md-3 col-lg-4">
+          <div class="p-4 bg-white shadow-sm rounded">
+            <h5 class="text-center text-muted mb-4"></h5>
+
+            <!-- Mock Ad 1 -->
+            <div class="mb-4 border rounded shadow-sm p-3 bg-light">
+              <small class="text-muted d-block mb-1">Sponsored</small>
+              <a
+                href="#"
+                target="_blank"
+                class="text-decoration-none text-dark"
+              >
+                <div class="ad-img-container">
+                  <img
+                    src="https://picsum.photos/300/150?random=1"
+                    class="ad-img rounded mb-2"
+                    alt="Ad Banner"
+                  />
+                </div>
+                <h6 class="mb-1">Top-Rated Schools Near You</h6>
+                <p class="mb-0 text-muted small">
+                  Enroll today and get early admission discounts!
+                </p>
+              </a>
+            </div>
+
+            <!-- Mock Ad 2 -->
+            <div class="mb-4 border rounded shadow-sm p-3 bg-light">
+              <small class="text-muted d-block mb-1">Advertisement</small>
+              <a
+                href="#"
+                target="_blank"
+                class="text-decoration-none text-dark"
+              >
+                <div class="ad-img-container">
+                  <img
+                    src="https://picsum.photos/300/150?random=2"
+                    class="ad-img rounded mb-2"
+                    alt="Ad Banner"
+                  />
+                </div>
+                <h6 class="mb-1">Buy School Supplies Online</h6>
+                <p class="mb-0 text-muted small">
+                  Back-to-school kits, uniforms & more. Fast delivery.
+                </p>
+              </a>
+            </div>
+
+            <!-- Mock Ad 3 -->
+            <div class="mb-4 border rounded shadow-sm p-3 bg-light">
+              <small class="text-muted d-block mb-1">Advertisement</small>
+              <a
+                href="#"
+                target="_blank"
+                class="text-decoration-none text-dark"
+              >
+                <div class="ad-img-container">
+                  <img
+                    src="https://picsum.photos/300/150?random=1"
+                    class="ad-img rounded mb-2"
+                    alt="Ad Banner"
+                  />
+                </div>
+                <h6 class="mb-1">Buy School Supplies Online</h6>
+                <p class="mb-0 text-muted small">
+                  Back-to-school kits, uniforms & more. Fast delivery.
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript to Fill Details -->
+    <script>
+      const navbar = document.querySelector(".navbar");
+
+      window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+        const heroHeight = document.querySelector(".hero").offsetHeight;
+
+        if (scrollY > heroHeight - 100) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+      const data = JSON.parse(localStorage.getItem("schoolDetails"));
+
+      if (data) {
+        document.getElementById("heroSchoolName").textContent =
+          data.schoolName || "Full School Details";
+        document.getElementById("schoolImage").src = data.schoolImage || "";
+        document.getElementById("website").textContent = data.website || "N/A";
+        document.getElementById("country").textContent = data.country || "N/A";
+        document.getElementById("city").textContent = data.city || "N/A";
+        document.getElementById("area").textContent = data.area || "N/A";
+        document.getElementById("location").textContent =
+          data.location || "N/A";
+        document.getElementById("gender").textContent = data.gender || "N/A";
+        document.getElementById("status").textContent = data.status || "N/A";
+
+        const description = `
+${
+  data.schoolName
+} provides a nurturing and inclusive environment where every student is encouraged to excel academically and personally. With a dedicated team of educators, the school fosters growth and confidence, ensuring students are well-prepared for the future. The school's commitment to excellence, creativity, and character development is what makes it stand out in the community.
+
+We aim to create an atmosphere where students feel valued, respected, and inspired to reach their full potential.
+
+Address: ${data.location || "N/A"}
+Contact: ${data.contact || "[N/A]"}
+`.trim();
+
+        document.getElementById("descriptionText").textContent = description;
+      }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Search School</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+ 
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Online Schools</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="school-detail.html">Back to School List</a></li>
+        <li class="nav-item"><a class="nav-link" href="school-detail.html">School Detail</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Branches</a></li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Register</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero">
+  <div class="container">
+    <h1>Search for a School</h1>
+    <p>Fill in the details to view school information</p>
+  </div>
+  <div class="wave"></div>
+</div>
+
+<!-- Main Content -->
+<div class="container-fluid">
+  <div class="row">
+    <!-- Form Section - 60% -->
+    <div class="col-md-7 px-5">
+      <div class="form-card">
+        <form action="school-detail.html" method="POST" enctype="multipart/form-data" id="schoolForm">
+          <div class="row g-3">
+            <div class="col-12">
+              <label class="form-label">School Name</label>
+              <input type="text" name="schoolName" class="form-control" required>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Website</label>
+              <input type="url" name="website" class="form-control">
+            </div>
+            <div class="col-12">
+              <label class="form-label">Country</label>
+              <input type="text" name="country" class="form-control" required>
+            </div>
+            <div class="col-12">
+              <label class="form-label">City</label>
+              <input type="text" name="city" class="form-control" required>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Area</label>
+              <input type="text" name="area" class="form-control">
+            </div>
+            <div class="col-12">
+              <label class="form-label">Location</label>
+              <input type="text" name="location" class="form-control">
+            </div>
+            <div class="col-12">
+              <label class="form-label">Gender</label>
+              <select name="gender" class="form-select" required>
+                <option value="" selected disabled>Select Gender</option>
+                <option value="Boys">Boys</option>
+                <option value="Girls">Girls</option>
+                <option value="Co-education">Co-education</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Status</label>
+              <select name="status" class="form-select" required>
+                <option value="" selected disabled>Select Status</option>
+                <option value="Active">Active</option>
+                <option value="Under Construction">Under Construction</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Upload School Picture</label>
+              <input type="file" name="schoolImage" class="form-control" accept="image/*" required>
+            </div>
+            <div class="col-12 text-center mt-4">
+              <button type="submit" class="btn btn-primary px-5 py-2">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+   <!-- Ads Section - 40% -->
+   <div class="col-md-5 col-lg-4 px-4">
+    <div class="p-4 bg-white shadow-sm rounded" style="margin-top: 20px;">
+      <h5 class="text-center text-muted mb-4"></h5>
+  
+      <!-- Ad 1 -->
+      <div class="mb-4 border rounded shadow-sm p-3 bg-light">
+        <small class="text-muted d-block mb-1">Sponsored</small>
+        <a href="#" target="_blank" class="text-decoration-none text-dark">
+          <img src="https://picsum.photos/600/200?random=1" 
+               class="w-100 rounded mb-2" 
+               alt="Ad Banner" 
+               style="object-fit: cover; height: auto;">
+          <h6 class="mb-1">Top-Rated Schools Near You</h6>
+          <p class="mb-0 text-muted small">Enroll today and get early admission discounts!</p>
+        </a>
+      </div>
+  
+      <!-- Ad 2 -->
+      <div class="mb-4 border rounded shadow-sm p-3 bg-light">
+        <small class="text-muted d-block mb-1">Advertisement</small>
+        <a href="#" target="_blank" class="text-decoration-none text-dark">
+          <img src="https://picsum.photos/600/200?random=2" 
+               class="w-100 rounded mb-2" 
+               alt="Ad Banner" 
+               style="object-fit: cover; height: auto;">
+          <h6 class="mb-1">Buy School Supplies Online</h6>
+          <p class="mb-0 text-muted small">Back-to-school kits, uniforms & more. Fast delivery.</p>
+        </a>
+      </div>
+  
+      <!-- Ad 3 -->
+      <div class="mb-4 border rounded shadow-sm p-3 bg-light">
+        <small class="text-muted d-block mb-1">Advertisement</small>
+        <a href="#" target="_blank" class="text-decoration-none text-dark">
+          <img src="https://picsum.photos/600/200?random=3" 
+               class="w-100 rounded mb-2" 
+               alt="Ad Banner" 
+               style="object-fit: cover; height: auto;">
+          <h6 class="mb-1">Online Learning Resources</h6>
+          <p class="mb-0 text-muted small">Interactive courses and video lessons for all ages.</p>
+        </a>
+      </div>
+  
+    </div>
+  </div>
+  
+
+  </div>
+</div>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const navbar = document.querySelector('.navbar');
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const heroHeight = document.querySelector('.hero').offsetHeight;
+
+    if (scrollY > heroHeight - 100) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+
+  document.getElementById('schoolForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+    const schoolData = {};
+    formData.forEach((value, key) => {
+      schoolData[key] = value;
+    });
+
+    const reader = new FileReader();
+    reader.onload = function(event) {
+      schoolData.schoolImage = event.target.result;
+
+      localStorage.setItem('schoolDetails', JSON.stringify(schoolData));
+
+      window.location.href = 'school-detail.html';
+    };
+
+    reader.readAsDataURL(formData.get('schoolImage'));
+  });
+</script>
+
+</body>
+</html>

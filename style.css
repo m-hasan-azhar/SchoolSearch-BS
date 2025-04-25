@@ -1,0 +1,330 @@
+/* Global Styles */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8f9fa, #e3f2fd);
+}
+
+/* Navbar */
+.navbar {
+  color: #1976d2 !important;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 0;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: #ffffff !important;
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #0d47a1 !important;
+}
+
+.navbar.scrolled {
+  background-color: #ffffff !important;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled .nav-link,
+.navbar.scrolled .navbar-brand {
+  color: #000 !important;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(120deg, #1976d2, #42a5f5);
+  padding: 80px 0 100px;
+  position: relative;
+  color: white;
+  text-align: center;
+  z-index: 0;
+  margin-bottom: 0;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background: url("https://svgshare.com/i/vN1.svg") no-repeat;
+  background-size: cover;
+}
+
+/* Form Section */
+.form-card {
+  margin-top: -60px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.8s ease;
+}
+
+label {
+  font-weight: 600;
+  color: #333;
+}
+
+input,
+select {
+  border-radius: 8px !important;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 0 4px rgba(25, 118, 210, 0.15);
+}
+
+.btn-primary {
+  background-color: #1976d2;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #1565c0;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Ads Area */
+.ads-area,
+.ad-area {
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  padding: 40px 20px;
+  height: 100%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.ad-box,
+.ad-img-container {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.ad-box img,
+.ad-img {
+  max-width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.ad-img-container {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+/* Filter Box */
+.filter-box {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+.filter-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+#searchInput:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Layout Utilities */
+.container,
+.row,
+section {
+  padding: 0;
+  margin: 0;
+}
+
+.card {
+  margin: 0;
+  padding: 0;
+}
+
+.p {
+  margin: 0px 5px;
+}
+
+/* Detail Card Styles */
+.detail-card,
+.content-area {
+  max-width: 800px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.detail-img,
+.school-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.school-img {
+  max-height: 300px;
+}
+
+.label {
+  font-weight: 600;
+  color: #444;
+}
+
+.value {
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.details-table td {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.details-table td:first-child {
+  font-weight: 600;
+  color: #333;
+}
+
+.description {
+  margin-top: 20px;
+  white-space: pre-wrap;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px;
+  gap: 20px;
+}
+
+.content-area {
+  flex: 0 0 70%;
+}
+
+.ad-area {
+  flex: 0 0 28%;
+  height: fit-content;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .content-area,
+  .ad-area {
+    flex: 100%;
+  }
+
+  .school-img {
+    max-height: 250px;
+  }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
+  .ad-area {
+    margin-top: 30px;
+  }
+}
+
+/* Detail Grid */
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.detail-item {
+  background: #f9f9f9;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 15px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Form Select */
+.form-select {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+  font-size: 0.95rem;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 18px;
+}
+
+.form-select:focus {
+  outline: none;
+  border-bottom: 2px solid #007bff;
+  background-color: transparent;
+  box-shadow: none;
+}
